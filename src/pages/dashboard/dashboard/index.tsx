@@ -195,7 +195,7 @@ export default function Dashboard() {
                     >
                         {/* <CartesianGrid strokeDasharray="3 3" /> */}
                         <XAxis dataKey="month" />
-                        {/* <YAxis /> */}
+                        <YAxis />
                         <Tooltip
                             content={({ active, payload, label }) => {
                                 if (active && payload && payload.length) {
@@ -265,7 +265,7 @@ export default function Dashboard() {
                             <Tooltip contentStyle={{ backgroundColor: '#fff', border: '1px solid #e5e7eb', borderRadius: '8px' }} />
                             <Bar dataKey="2024" fill="#8979FF" />
                             <Bar dataKey="2025" fill="#B6E2D3" />
-                            <Legend />
+                            <Legend verticalAlign="top" align="right" />
 
                         </BarChart>
                     </ResponsiveContainer>
