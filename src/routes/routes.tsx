@@ -7,6 +7,13 @@ import VerifyOtp from '../pages/authentication/VerifyOtp';
 import NewPassword from '../pages/authentication/NewPassword';
 import Dashboard from '../pages/dashboard/dashboard';
 import Users from '../pages/dashboard/users';
+import ClubsTable from '../pages/dashboard/clubs';
+import AboutUs from '../pages/dashboard/about-us';
+import PrivacyPolicy from '../pages/dashboard/privacy-policy';
+import TermsAndCondition from '../pages/dashboard/terms-and-condition';
+import Disclaimer from '../pages/dashboard/disclaimer';
+import Profile from '../pages/dashboard/profile';
+import NotificaitonPage from '../pages/dashboard/notification';
 
 
 const router = createBrowserRouter([
@@ -16,7 +23,14 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
         children: [
             { path: '', element: <Dashboard/> },
-            {path:"users",element:<Users/>}
+            {path:"users",element:<Users/>},
+            {path:"clubs-deck",element:<ClubsTable/>},
+            {path:"about-us",element:<AboutUs/>},
+            {path:"privacy-policy",element:<PrivacyPolicy/>},
+            {path:"terms-of-service",element:<TermsAndCondition/>},
+            {path:"disclaimer",element:<Disclaimer/>},
+            { path: 'profile', element: <Profile /> },
+            { path: 'notification', element: <NotificaitonPage /> },
         ],
     },
     { path: '/login', element: <Login /> },
