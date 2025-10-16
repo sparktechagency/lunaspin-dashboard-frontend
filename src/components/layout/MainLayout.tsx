@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Layout, theme } from 'antd';
+import { Layout } from 'antd';
 import { Outlet } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import DashboardHeader from './DashboardHeader';
@@ -8,9 +8,6 @@ import DashboardHeader from './DashboardHeader';
 const { Content } = Layout;
 
 const MainLayout: React.FC = () => {
-    const {
-        token: { borderRadiusLG },
-    } = theme.useToken();
 
     return (
         <Layout
@@ -20,11 +17,10 @@ const MainLayout: React.FC = () => {
         >
             <Sidebar />
             <Layout>
-                <Content className="md:m-8">
-                    <DashboardHeader />
+                <DashboardHeader />
+                <Content >
                     <div
-                        className=" !rounded-xl min-h-[50vh] w-full bg-[#F9F0EC] p-6 h-[calc(100vh-133px)] overflow-y-scroll"
-                        style={{ borderRadius: borderRadiusLG }}
+                        className=" min-h-[50vh] w-full p-3 h-[calc(100vh-80px)] overflow-y-scroll"
                     >
                         <Outlet />
                     </div>

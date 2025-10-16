@@ -3,7 +3,6 @@ import { TSidebarItem } from '../../utils/generateSidebarItems';
 import sidebarItems from '../../utils/sidebarItems';
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
-import { LogOut, Settings } from 'lucide-react';
 const { Sider } = Layout;
 
 const Sidebar = () => {
@@ -74,7 +73,7 @@ const Sidebar = () => {
                 {/* logo of the website */}
                 <Link to="/">
                     <div className="flex flex-col gap-3 items-center justify-center p-5 pb-2">
-                        <img src="/logo.png" alt="" className="h-14" />
+                        <img src="/logo-lunaspin.png" alt="" className="h-14" />
                     </div>
                 </Link>
 
@@ -86,7 +85,7 @@ const Sidebar = () => {
                     onOpenChange={handleOpenChange}
                     items={sidebarItemsGenerator(sidebarItems)}
                     style={{ background: 'transparent' }}
-                    className="flex-1 z-50"
+                    className="flex-1 z-50 [&_.ant-menu-submenu]:!bg-transparent [&_.ant-menu-sub]:!bg-transparent"
                 />
             </Sider>
         </ConfigProvider>

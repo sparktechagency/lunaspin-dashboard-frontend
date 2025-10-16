@@ -5,12 +5,8 @@ import ErrorPage from '../pages/error/ErrorPage';
 import ForgetPassword from '../pages/authentication/ForgetPassword';
 import VerifyOtp from '../pages/authentication/VerifyOtp';
 import NewPassword from '../pages/authentication/NewPassword';
-import ServiceDeck from '../pages/dashboard/service-deck';
-import NDA from '../pages/dashboard/nda';
-import Asset from '../pages/dashboard/asset';
-import TrainingMaterial from '../pages/dashboard/training-material';
-import Profile from '../pages/dashboard/profile';
-import SupportInboxTable from '../pages/dashboard/support/SupportSection';
+import Dashboard from '../pages/dashboard/dashboard';
+import Users from '../pages/dashboard/users';
 
 
 const router = createBrowserRouter([
@@ -19,12 +15,8 @@ const router = createBrowserRouter([
         element:  <App />,
         errorElement: <ErrorPage />,
         children: [
-            { path: '', element: <NDA/> },
-            {path:"asset",element:<Asset/>},
-            { path: 'service-deck', element: <ServiceDeck/> },
-            { path: 'training-material', element: <TrainingMaterial/> },
-            {path:"profile",element:<Profile/>},
-            {path:"support",element:<SupportInboxTable/>},
+            { path: '', element: <Dashboard/> },
+            {path:"users",element:<Users/>}
         ],
     },
     { path: '/login', element: <Login /> },

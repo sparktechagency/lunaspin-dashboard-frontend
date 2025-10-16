@@ -1,46 +1,59 @@
 import { LiaThListSolid } from 'react-icons/lia';
 import { TSidebarItem } from './generateSidebarItems';
 import { LuClipboardList } from 'react-icons/lu';
-import { TbBook, TbMessageCircleUser } from 'react-icons/tb';
-import { FaRegUserCircle, FaUsers } from 'react-icons/fa';
+import { TbBook } from 'react-icons/tb';
 import { PiUserList } from 'react-icons/pi';
 
 const sidebarItems: TSidebarItem[] = [
     {
         key: 'client-list',
-        label: 'NDA',
+        label: 'Dashboard',
         path: '',
         icon: <LuClipboardList  size={24} />,
     },
     {
-        key: 'asset',
-        label: 'Asset',
-        path: 'asset',
+        key: 'users',
+        label: 'Users',
+        path: 'users',
         icon: <TbBook size={24} />,
     },
     {
         key: 'service-deck',
-        label: 'Service Deck',
+        label: 'Clubs Deck',
         path: 'service-deck',
         icon: <PiUserList size={24} />,
     },
     {
         key: 'training-material',
-        label: 'Training Material',
+        label: 'Settings',
         path: 'training-material',
         icon: <LiaThListSolid size={24} />,
-    },
-    {
-        key: 'profile',
-        label: 'Profile',
-        path: 'profile',
-        icon: <FaRegUserCircle size={24} />,
-    },
-    {
-        key: 'Support',
-        label: 'Support',
-        path: 'support',
-        icon: <TbMessageCircleUser   size={24} />,
+        children: [
+            {
+                key: 'preferences',
+                label: 'About us',
+                path: 'about-us',
+                icon: <TbBook size={20} />,
+            },
+            {
+                key: 'terms-of-service',
+                label: 'Terms of Service',
+                path: 'terms-of-service',
+                icon: <LuClipboardList size={20} />,
+            },
+            {
+                key: 'privacy-policy',
+                label: 'Privacy Policy',
+                path: 'privacy-policy',
+                icon: <LuClipboardList size={20} />,
+            },
+            {
+                key: 'disclaimer',
+                label: 'Disclaimer',
+                path: 'disclaimer',
+                icon: <LuClipboardList size={20} />,
+            },
+        ],
     }
 ];
 
