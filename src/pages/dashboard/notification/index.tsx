@@ -103,7 +103,7 @@ export default function NotificationPage() {
   const hasUnread = notifications.some(n => !n.read);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className=" bg-gray-50">
       <div>
         <div className="bg-white">
           <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200">
