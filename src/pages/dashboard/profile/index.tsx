@@ -84,6 +84,7 @@ export default function Profile() {
 
   // Form Handlers
   const handleProfileSubmit = (values: typeof initialProfileValues) => {
+    console.log(values)
     // TODO: Submit form values to backend as needed
     message.success('Profile updated successfully!');
   };
@@ -108,6 +109,7 @@ export default function Profile() {
     values?: any
   ) =>
     fields.map((field: any) => {
+      console.log(values)
       if (isPassword) {
         // For password fields, show/hide based on toggle
         return (
