@@ -126,9 +126,8 @@ export default function Dashboard() {
     return (
         <div style={{ width: '100%' }}>
             {/* Date Picker Custom UI */}
-            <div className="flex justify-end items-center mb-6">
+            {/* <div className="flex justify-end items-center mb-6">
                 <div className="flex items-center  border-gray-200 bg-white rounded-sm  text-[#505B6B] shadow-sm overflow-hidden" style={{ width: 250 }}>
-                    {/* Main DatePicker as UI */}
                     <DatePicker
                         value={selectedDate}
                         onChange={handleChange}
@@ -146,10 +145,9 @@ export default function Dashboard() {
                           border: 'none',
                           boxShadow: 'none',
                         }}
-                        // 'open' prop not needed
                     />
                 </div>
-            </div>
+            </div> */}
 
             {/* Stat Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
