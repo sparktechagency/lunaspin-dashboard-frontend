@@ -3,13 +3,12 @@ import { TSidebarItem } from '../../utils/generateSidebarItems';
 import sidebarItems from '../../utils/sidebarItems';
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
-import { LogOut, Settings } from 'lucide-react';
+import { LogOut } from 'lucide-react';
 const { Sider } = Layout;
 
 const Sidebar = () => {
     const location = useLocation();
     const [openKeys, setOpenKeys] = useState<string[]>([]);
-    const [collapsed, setCollapsed] = useState(false);
 
     const handleOpenChange = (keys: string[]) => {
         setOpenKeys(keys);
@@ -61,9 +60,6 @@ const Sidebar = () => {
                 theme="light"
                 breakpoint="lg"
                 collapsedWidth="0"
-                onCollapse={(collapsed) => {
-                    setCollapsed(collapsed);
-                }}
                 className="!relative overflow-hidden !bg-gradient-to-b !from-[#540D6E] !to-[#13293D] flex flex-col"
             >
                 {/* Background circle behind menu */}
