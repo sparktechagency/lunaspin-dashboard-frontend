@@ -18,8 +18,8 @@ export default function DashboardHeader() {
     <div className="bg-white border-b border-gray-200 px-4 sm:px-6 py-4 " >
       <div className="flex items-center justify-between gap-4">
         {/* Left section - Greeting */}
-        <div>
-          <h1 className="text-xl sm:text-3xl text-[#425464]">
+        <div >
+          <h1 className="text-xl sm:text-3xl text-[#425464] hidden md:block">
             {keyItem.toLowerCase() === "profile" ? keyItem.charAt(0).toUpperCase() + keyItem.slice(1) : keyItem}
           </h1>
         </div>

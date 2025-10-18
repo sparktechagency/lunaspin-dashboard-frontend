@@ -142,14 +142,17 @@ const ClubsTable: React.FC = () => {
   return (
     <div className=" bg-gray-50 ">
       <div className="bg-white rounded-lg shadow">
-        <Table 
-          columns={columns} 
-          dataSource={clubsData as any} 
-          pagination={{
-            pageSize: 10,
-            total: 100
-          }}
-        />
+        <div className="w-full overflow-x-auto">
+          <Table 
+            columns={columns} 
+            dataSource={clubsData as any} 
+            pagination={{
+              pageSize: 10,
+              total: 100
+            }}
+            scroll={{ x: 'max-content' }}
+          />
+        </div>
       </div>
 
       <ClubModal isModalOpen={isModalOpen} handleModalClose={handleModalClose} selectedClub={selectedClub} />

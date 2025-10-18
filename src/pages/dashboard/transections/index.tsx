@@ -122,14 +122,17 @@ const TransactionsTable: React.FC = () => {
 
 
       <div className="bg-white rounded-lg shadow">
-        <Table 
-          columns={columns as any} 
-          dataSource={Transectiondata} 
-          pagination={{
-            pageSize: 10,
-            showSizeChanger: true,
-          }}
-        />
+        <div className="w-full overflow-x-auto">
+          <Table 
+            columns={columns as any} 
+            dataSource={Transectiondata} 
+            pagination={{
+              pageSize: 10,
+              showSizeChanger: true,
+            }}
+            scroll={{ x: 'max-content' }}
+          />
+        </div>
       </div>
 
       <TransactionModal
