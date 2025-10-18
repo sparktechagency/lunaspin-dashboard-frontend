@@ -118,16 +118,19 @@ const UserTable = () => {
   return (
     <div className=" bg-gray-50">
       <div className="bg-white rounded-lg shadow">
-        <Table 
-          columns={columns as any} 
-          dataSource={demoData} 
-          pagination={{
-            defaultPageSize: 10,
-            showSizeChanger: false,
-            total: 50
-          }}
-          className="user-management-table"
-        />
+        <div className="w-full overflow-x-auto">
+          <Table 
+            columns={columns as any} 
+            dataSource={demoData} 
+            pagination={{
+              defaultPageSize: 10,
+              showSizeChanger: false,
+              total: 50
+            }}
+            className="user-management-table"
+            scroll={{ x: 'max-content' }}
+          />
+        </div>
       </div>
 
       <UserModal isModalOpen={isModalOpen} handleModalClose={handleModalClose} selectedUser={selectedUser}/>
