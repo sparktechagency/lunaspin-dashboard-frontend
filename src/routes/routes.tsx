@@ -15,31 +15,38 @@ import Disclaimer from '../pages/dashboard/disclaimer';
 import Profile from '../pages/dashboard/profile';
 import NotificaitonPage from '../pages/dashboard/notification';
 import TransactionsTable from '../pages/dashboard/transections';
+import PrivacyPolicyPage from '../pages/PrivacyPolicy';
+import SupportPage from '../pages/SupportPage';
+import DeleteAccount from '../pages/authentication/DeleteAccount';
 
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element:  <App />,
+        element: <App />,
         errorElement: <ErrorPage />,
         children: [
-            { path: '', element: <Dashboard/> },
-            {path:"users",element:<Users/>},
-            {path:"clubs-deck",element:<ClubsTable/>},
-            {path:"about-us",element:<AboutUs/>},
-            {path:"privacy-policy",element:<PrivacyPolicy/>},
-            {path:"terms-of-service",element:<TermsAndCondition/>},
-            {path:"disclaimer",element:<Disclaimer/>},
+            { path: '', element: <Dashboard /> },
+            { path: "users", element: <Users /> },
+            { path: "clubs-deck", element: <ClubsTable /> },
+            { path: "about-us", element: <AboutUs /> },
+            { path: "privacy-policy", element: <PrivacyPolicy /> },
+            { path: "terms-of-service", element: <TermsAndCondition /> },
+            { path: "disclaimer", element: <Disclaimer /> },
             { path: 'profile', element: <Profile /> },
             { path: 'notification', element: <NotificaitonPage /> },
-            {path:"transactions",element:<TransactionsTable/>},
+            { path: "transactions", element: <TransactionsTable /> },
         ],
     },
     { path: '/login', element: <Login /> },
     { path: '/forget-password', element: <ForgetPassword /> },
     { path: '/verify-otp', element: <VerifyOtp /> },
     { path: '/new-password', element: <NewPassword /> },
-   
+    { path: '/privacy', element: <PrivacyPolicyPage /> },
+    { path: '/support', element: <SupportPage /> },
+    { path: '/delete-account', element: <DeleteAccount /> },
+
+
 ]);
 
 export default router;
